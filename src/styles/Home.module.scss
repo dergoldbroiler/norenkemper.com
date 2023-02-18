@@ -1,0 +1,12 @@
+$rose: rgba(253,243,236,1);
+$black: rgba(0,0,0,.96);
+$white: rgba(255,255,255,1);
+
+header {
+    &.header{
+        height: 100%;
+        background-color: $rose;
+        width: 100%;
+    }
+    
+}

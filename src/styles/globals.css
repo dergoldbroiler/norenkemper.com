@@ -2,9 +2,15 @@
   font-family: 'Defaultfont';
   src: url(fonts/MarkPro-Medium.otf);
 }
+html, body, #__next {
+  height: 100%;
+  overflow-x: hidden;
+}
+
 
 body {
   font-family: 'Defaultfont' !important;
   padding: 0;
+  font-size: 20px;;
 }
 

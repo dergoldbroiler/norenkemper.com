@@ -72,6 +72,9 @@ header {
             max-width: 40%;
         }
         
+        @media(max-width:580px){
+            max-width: 50%;
+        }
     }
 
     ul {
@@ -79,8 +82,11 @@ header {
         &.nav_main {
             list-style: none;
             padding-left: 0;
+            height: auto;
+            min-height: 100%;
+            padding-bottom: 100px;
             li {
-                padding-bottom:30px;
+                padding-bottom:20px;
                 opacity: 0;
                 animation: fdsseq .5s forwards;
 
@@ -88,7 +94,6 @@ header {
                     animation-delay: .1s;
                 }
                 &:nth-child(2){
-                    
                     animation-delay: .2s;
                 }
                 &:nth-child(3){
@@ -113,6 +118,10 @@ header {
                     text-decoration: none;
                     color: white;
                     font-size: 1.33em;
+
+                    @media(max-width:768px){
+                        font-size: 1.2em;
+                    }
                 }
             }
         }
@@ -143,22 +152,35 @@ header {
     z-index:2;
     width: 100%;
 
-    .headlines {
-        margin-top: -200px;
-        @media(max-width:768px){
-            padding-left: 15px;
-            padding-top: 30px;
-        }
-        h3, h1 {
-            &.fadein{
-                opacity: 0;
-                animation: fdsseq .5s forwards;
-            }
-            &.animation{
-                animation:  slide-in-bottom .8s forwards;
-            }
-            
-        }
+    
+}
 
+.headlines {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    right: 0;
+    padding-right: 5%;
+
+
+
+    h3, h1 {
+        &.fadein{
+            opacity: 0;
+            animation: fdsseq .5s forwards;
+        }
+        &.animation{
+            animation:  slide-in-bottom .8s forwards;
+        }
+        
     }
+
+}
+
+
+
+/*helper fn*/
+
+.bg-gray {
+    background-color: #cfcfcf;
 }

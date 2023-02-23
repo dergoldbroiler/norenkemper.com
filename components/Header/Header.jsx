@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 //Bootstrap
 import Container from 'react-bootstrap/Container';
@@ -9,24 +9,19 @@ import { Row, Col } from "react-bootstrap";
 import { Logo } from "./components/Logo";
 import { Navigation } from "./components/Navigation";
 import { Headlines } from "./components/Headlines";
-import { Headerpreloading } from "./Headerpreloading";
+ import { effects } from "public/js/effects";
+
+import { useIntersectionobserving } from "hooks/useIntersectionobserving";
+
 
 export const Header = () => {
 
-    const [loaded, setLoaded] = useState(false);
+    const header_ref = useRef();
 
-    useEffect(() => {
-        setTimeout(()=> {
-            setLoaded(true);
-        }, 1200)
-    },[loaded])
 
-    if(!loaded) {
-        return <Headerpreloading />
-    }
 
     return (
-        <header className="header">
+        <header className="header" ref={header_ref}> 
             <Container fluid className="h-100">
                 <Row>
                     <Col>
@@ -39,8 +34,8 @@ export const Header = () => {
                     </Col>
                 </Row>
             </Container>
-
-            <Headlines textColor="#fff" classes="no-animation fadein"/>
+     
         </header>
+        
     )
 }

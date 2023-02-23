@@ -1,6 +1,9 @@
+import { useEffect } from "react";
 
 
 export const Headlines = ({textColor, classes}) => {
+
+ 
 
     return ( 
        <div className="headlines d-md-flex justify-content-end">

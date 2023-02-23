@@ -1,22 +1,40 @@
+import { useEffect, useRef, useState } from 'react';
 import { Layout} from 'components/Layout';
 
 import { Header } from 'components/Header/Header';
 import { Videolayer} from 'components/Videolayer';
 import { Contentlayer } from 'components/Contentlayer';
 
-import { Company } from 'components/Pages/Company';
+import { Unternehmen } from 'components/Pages/Unternehmen';
+import { NGO } from 'components/Pages/NGO';
+import { Headerpreloading } from "components/Header/components/Headerpreloading";
+
 
 export default function Home() {
+
+
+ 
+  const [header, setHeader] = useState(<Headerpreloading />);
+
+  /* load headline after 1200ms */
+  useEffect(() => {
+    setTimeout(()=> {
+        setHeader(<Header />);
+    }, 1200)
+  },[header]);
+
+
   return (
       
     <Layout>
       <Videolayer />
      
       <Contentlayer>
-        <Header />
-        <Company />
+        {header}
+        <Unternehmen />
+        <NGO />
       </Contentlayer>
-
+   
     </Layout>
   )
 }

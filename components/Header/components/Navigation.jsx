@@ -3,7 +3,8 @@
 export const Navigation = ({url}) => {
 
     return ( 
-        <ul className="nav_main">
+        <ul className="nav_main" >
+    
             <li>
                 <a href="#unternehmen">Für Unternehmen</a>
             </li>
@@ -33,3 +34,4 @@ export const Navigation = ({url}) => {
    
 }
 
+    

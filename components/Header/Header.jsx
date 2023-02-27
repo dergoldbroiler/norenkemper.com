@@ -14,11 +14,14 @@ import { Headlines } from "./components/Headlines";
 import { useIntersectionobserving } from "hooks/useIntersectionobserving";
 
 
+
 export const Header = () => {
 
     const header_ref = useRef();
 
-
+    const handleClick = (anchor) => {
+        effects.scrollToElement(anchor);
+      }
 
     return (
         <header className="header" ref={header_ref}> 
@@ -30,7 +33,7 @@ export const Header = () => {
                 </Row>
                 <Row>
                     <Col>
-                        <Navigation />
+                        <Navigation handleClick={handleClick}/>
                     </Col>
                 </Row>
             </Container>

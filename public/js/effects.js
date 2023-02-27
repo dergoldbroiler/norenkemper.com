@@ -5,6 +5,22 @@ export const effects = ( function() {
     }
 
 
+    const scrollToElement = (anchor) => {
+
+        const anchor_element = document.querySelector(anchor);
+        const offset_top = anchor_element.offsetTop;
+        const scrollable_element = document.getElementById('layer_content');
+        
+        
+        scrollable_element.scrollTo({
+            top: offset_top,
+            left: 0,
+            behavior:"smooth"
+        })
+
+    }
+
+
     /* scrolls the videobackground smoother than the content layer */
     const scrollEffects = () => {
         const layer_content = document.getElementById('layer_content');
@@ -17,9 +33,31 @@ export const effects = ( function() {
         }); 
     }
 
+
+    const imageFadeIn = () => {
+        const images = document.querySelectorAll('.toAnimate');
+
+        const image_observer = new IntersectionObserver(entries => {
+            const [entry] = entries; 
+            
+               
+                    entry.isIntersecting ? entry.target.classList.add('fadeIn') : entry.target.classList.remove('fadeIn');
+                
+              
+          
+        },{threshold: .5});
+
+        images.forEach(image => {
+            image_observer.observe(image)
+        });
+        
+    }
+
    
     const return_object =  {
         scrollEffects: scrollEffects,
+        scrollToElement: scrollToElement,
+        imageFadeIn: imageFadeIn
     }
 
 

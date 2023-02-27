@@ -1,15 +1,15 @@
 
 
-export const Navigation = ({url}) => {
+export const Navigation = ({url, handleClick}) => {
 
     return ( 
         <ul className="nav_main" >
     
             <li>
-                <a href="#unternehmen">Für Unternehmen</a>
+                <a href="#unternehmen" >Für Unternehmen</a>
             </li>
             <li>
-                <a href="#nonprofit">Für NGOs und Non-Profits</a>
+                <a href="#nonprofit" onClick={e => handleClick('#ngo')}>Für NGOs und Non-Profits</a>
             </li>
             <li>
                 <a href="#coaching">Coaching</a>
@@ -34,4 +34,3 @@ export const Navigation = ({url}) => {
    
 }
 
-    

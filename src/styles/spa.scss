@@ -184,3 +184,16 @@ header {
 .bg-gray {
     background-color: #cfcfcf;
 }
+
+
+img.fadeIn {
+    width: 500px !important;
+    height: auto;
+    transition: all .3s;
+}
+
+img.toAnimate {
+    width: 100px;
+    height: auto;
+    transition: all .3s;;
+}

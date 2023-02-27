@@ -9,6 +9,8 @@ import { Unternehmen } from 'components/Pages/Unternehmen';
 import { NGO } from 'components/Pages/NGO';
 import { Headerpreloading } from "components/Header/components/Headerpreloading";
 
+import { effects } from 'public/js/effects';
+
 
 export default function Home() {
 
@@ -16,8 +18,13 @@ export default function Home() {
  
   const [header, setHeader] = useState(<Headerpreloading />);
 
+
+ 
+
+
   /* load headline after 1200ms */
   useEffect(() => {
+    effects.imageFadeIn();
     setTimeout(()=> {
         setHeader(<Header />);
     }, 1200)

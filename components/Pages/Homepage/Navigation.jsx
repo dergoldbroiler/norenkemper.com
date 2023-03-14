@@ -6,10 +6,11 @@ export const Navigation = ({url, handleClick}) => {
         <ul className="nav_main" >
     
             <li>
-                <a href="#unternehmen" >Für Unternehmen</a>
+                <a href="#unternehmen" onClick={e => handleClick(e,'#unternehmen')}>Für Unternehmen</a>
             </li>
+            
             <li>
-                <a href="#nonprofit" onClick={e => handleClick('#ngo')}>Für NGOs und Non-Profits</a>
+                <a href="#nonprofit" onClick={e => handleClick(e,'#ngo')}>Für NGOs und Non-Profits</a>
             </li>
             <li>
                 <a href="#coaching">Coaching</a>

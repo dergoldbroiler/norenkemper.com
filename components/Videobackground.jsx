@@ -3,6 +3,7 @@ export const Videobackground = ({url, poster}) => {
 
     return (
         <video 
+        className="videobackground"
             autoPlay 
             loop 
             muted  

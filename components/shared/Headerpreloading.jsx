@@ -1,4 +1,4 @@
-import { Headlines } from "./Headlines";
+import { Headlines } from "../Pages/Homepage/Headlines";
 
 /**
  * Shown at first for layout reasons.

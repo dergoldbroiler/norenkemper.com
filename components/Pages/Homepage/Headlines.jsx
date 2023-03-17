@@ -20,7 +20,7 @@ const variants = {
                       initial={{ y:-500, opacity:0 }}
                       animate={{ y:0, opacity: .5 }}
                      style={{color:textColor}} 
-                     className={classes}>
+                     className="right-left">
                      
                      Sven Norenkemper
 
@@ -31,7 +31,7 @@ const variants = {
                      animate={{ opacity: 1 }}
                      transition={{ ease: "easeOut", duration: 1}}
                      style={{color:textColor}} 
-                     className={classes}>
+                     className="right-left">
                     
                     Organsationsberatung<br/>
                     Coaching<br/>
@@ -51,15 +51,15 @@ const variants = {
                 <motion.h3 
                       initial={{ opacity:0 }}
                       animate={{opacity: 1 }}
-                     style={{color:textColor,textAlign:"right"}} 
-                     className={classes}
+                     style={{color:textColor}} 
+                     className="right-left"
                      transition={{ duration: 1 }}
                      >
                      
                      Sven Norenkemper
 
                  </motion.h3>
-                <h1 style={{textAlign:"right"}} >
+                <h1 className="right-left">
                     <div class="roller">
                     <span id="rolltext"> Organsationsberatung<br/>
                                     Coaching<br/>

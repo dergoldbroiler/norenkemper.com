@@ -1,24 +1,38 @@
 import { useRef, useEffect } from "react";
-
+import { motion } from "framer-motion";
 
 export const Unternehmen = () => {
-
-    const company_element = useRef();
- 
-
-    useEffect(()=>{
-       
-    });
-
-   
-   
+     
+    const container = {
+        hidden: { opacity: 0},
+        show: {
+          opacity: 1,
+          transition: {
+            staggerChildren: 0.5,
+            duration:.5
+          }
+        }
+      }
+      const item = {
+        hidden: { opacity: 0, marginTop:-1000  },
+        show: { opacity: 1, marginTop:0  }
+      }
     return(
         <section  className="w-100 h-100 bg-white" id="company">
-            <h1 className="text-center">Die Headline für den<br/>Bereich Unternehmen</h1>
+           
+           
+                <motion.h1 variants={container} initial="hidden" whileInView="show" className="text-center">
+
+                    <motion.span variants={item}>Das ist die erste Zeile</motion.span><br />
+                    <motion.span variants={item}>und das die zweite</motion.span>
+
+                </motion.h1>
+           
+
 
            
 
-            <div className="media-content-flex">
+            <div className="media-content-flex default-left-right">
                 <img src="images/sven01.JPG" />
 
                 <p>

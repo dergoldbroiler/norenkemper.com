@@ -60,7 +60,7 @@ const variants = {
 
                  </motion.h3>
                 <h1 className="right-left">
-                    <div class="roller">
+                    <div className="roller">
                     <span id="rolltext"> Organsationsberatung<br/>
                                     Coaching<br/>
                                     Training<br/></span>

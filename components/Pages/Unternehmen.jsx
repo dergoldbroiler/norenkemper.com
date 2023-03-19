@@ -17,16 +17,30 @@ export const Unternehmen = () => {
         hidden: { opacity: 0, marginTop:-1000  },
         show: { opacity: 1, marginTop:0  }
       }
+
+      const badge = {
+        hidden: { x:-100, opacity:0},
+        show: { x:0, 
+             opacity:1,
+                transition: {
+                duration:.5
+                }  
+            } 
+      }
     return(
         <section  className="w-100 h-100 bg-white" id="company">
            
-           
+           <motion.h3 className="headline-badge" variants={badge} initial="hidden" whileInView="show"><span>&gt; unternehmen</span></motion.h3>
                 <motion.h1 variants={container} initial="hidden" whileInView="show" className="text-center">
-
+               
                     <motion.span variants={item}>Das ist die erste Zeile</motion.span><br />
                     <motion.span variants={item}>und das die zweite</motion.span>
 
+                    
+
                 </motion.h1>
+
+                
            
 
 

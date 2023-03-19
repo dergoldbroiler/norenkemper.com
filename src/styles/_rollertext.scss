@@ -1,0 +1,103 @@
+
+.roller{
+    height: 4.125rem;
+    line-height: 4rem;
+    position: relative;
+    overflow: hidden; 
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    
+    color: #fff;
+
+    animation: show-3-lines 1s;
+    animation-delay: 5s;
+    animation-fill-mode: forwards;
+
+    
+  }
+  
+.roller #rolltext {
+    position: absolute;
+    top: 0;
+    animation: slide 5s;  
+  }
+  
+  @keyframes slide {
+        0%{
+        top:0;
+        }
+        25%{
+        top: -4rem;    
+        }
+        50%{
+        top: -8rem;
+        }
+        /*72.5%{
+            top: -12.25rem;
+        }*/
+  }
+
+  @keyframes show-3-lines {
+    0%{
+        height: 4.125rem;
+        line-height: 4rem;
+    }
+    100%{
+        height: 12.4rem;  
+        line-height: 2.8rem;
+    }
+  }
+
+  
+  @media screen and (max-width: 600px){
+    h1{
+    text-align:left;
+    text-transform: uppercase;
+
+       
+  }
+    
+    .roller{
+    height: 2.6rem; 
+    line-height: 2.125rem;  
+    animation-delay: 3s;
+    animation-fill-mode: forwards;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    }
+    
+   
+    .roller #rolltext {  
+    animation: slide-mob 3s;  
+
+
+  }
+    
+    @keyframes slide-mob {
+    0%{
+      top:0;
+    }
+    25%{
+      top: -2.125rem;    
+    }
+    50%{
+      top: -4.25rem;
+    }
+  /*  72.5%{
+      top: -6.375rem;
+    } */
+  }
+  @keyframes show-3-lines {
+    0%{
+        height: 2.6rem; 
+    line-height: 2.125rem;  
+    }
+    100%{
+        height: 7.8rem;  
+    }
+  }
+
+  }

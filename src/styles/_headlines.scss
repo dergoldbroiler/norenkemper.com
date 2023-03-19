@@ -1,0 +1,28 @@
+.headlines {
+    position: absolute;
+    width: 100%;
+    top: 70%;
+    right: 0;
+    padding-right: 5%;
+    height: 200px;
+
+
+    h3, h1 {
+    
+        &.fadein{
+            opacity: 0;
+            animation: fdsseq .5s forwards;
+        }
+        &.animation{
+            animation:  slide-in-bottom .8s forwards;
+        }
+        
+        &.right-left{
+            text-align: right;
+            @media(max-width:600px) {
+                text-align: left;
+            }
+        }
+    }
+
+}

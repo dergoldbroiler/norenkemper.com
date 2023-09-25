@@ -5,11 +5,27 @@ import { Unternehmen } from 'components/Pages/Unternehmen';
 import { NGO } from 'components/Pages/NGO';
 import { Homepage } from 'components/Pages/Homepage';
 
-
+import { useRef, forwardRef, useState, useEffect } from "react";
 
 export default function Home() {
 
+
+  const company_ref = useRef(null);
   
+  const handleNavScrollingByRef = (e, type) => {
+   
+    if(type === "company") {
+      console.log(company_ref)
+    }
+        
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+        }
+    );
+  }
+ 
 
   return (
       
@@ -18,8 +34,8 @@ export default function Home() {
         <title>Sven Norenkemper</title>
       </Head>
 
-        <Homepage image={true} video={false} /> 
-        <Unternehmen />
+        <Homepage image={false} video={true} navScrolling={handleNavScrollingByRef}/> 
+        <Unternehmen reference={company_ref}/>
 
         <NGO />
    

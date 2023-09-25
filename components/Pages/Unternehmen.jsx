@@ -1,8 +1,10 @@
 import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export const Unternehmen = () => {
-     
+export const Unternehmen = ({reference}) => {
+    
+    const company_ref = useRef();
+
     const container = {
         hidden: { opacity: 0},
         show: {
@@ -26,10 +28,11 @@ export const Unternehmen = () => {
                 duration:.5
                 }  
             } 
-      }
+    }
+
+
     return(
-        <section  className="w-100 h-100 bg-white" id="company">
-           
+        <section  className="w-100 h-100 bg-white" id="company" ref={reference}>
            <motion.h3 className="headline-badge" variants={badge} initial="hidden" whileInView="show"><span>&gt; unternehmen</span></motion.h3>
                 <motion.h1 variants={container} initial="hidden" whileInView="show" className="text-center">
                

@@ -117,6 +117,9 @@ section{
     height: auto !important;
     padding-top: 0;
     padding-bottom: 200px;
+     .headline-badge{
+        padding-top: 60px !important;
+    }
     .ngo-content {
         h1 {
             padding-bottom: 30px;
@@ -127,12 +130,7 @@ section{
     @media(max-width:992px) {
         padding-bottom: 60px;
 
-        .ngo-content {
-            .headline-badge{
-                margin-bottom: 50px;
-            }
-            
-        }
+       
     }
     @media(max-width:600px) {
         padding-bottom: 30px;

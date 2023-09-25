@@ -9,7 +9,7 @@ const empty_homepage_state = {
     image: false
 }
 
-export const Homepage = ({image, video}) => {
+export const Homepage = ({image, video, navScrolling}) => {
 
     const [homepage_state, setHomepageState] = useState(empty_homepage_state);
 
@@ -21,24 +21,10 @@ export const Homepage = ({image, video}) => {
             image: image
         }
         setHomepageState(new_state);
-       }, 2000);
+       }, 1000);
     },[]);
 
 
-
-    
-
-    
-
-    const handleClick = (e, id) => {
-     
-        window.scrollTo({
-            top: 1000,
-            left: 0,
-            behavior: 'smooth'
-            }
-        );
-    }
 
     /*
     * animate the headline
@@ -58,7 +44,7 @@ export const Homepage = ({image, video}) => {
         <Videobackground />
         <section  className="w-100 h-100" id="homepage layer_video">
             <Logo url="/images/logo.png" />
-            <Navigation handleClick={handleClick}/>
+            <Navigation navScrolling={navScrolling}/>
             <Headlines textColor="#fff"  />
         </section>
         </>
@@ -71,7 +57,7 @@ export const Homepage = ({image, video}) => {
         <Imagebackground />
         <section  className="w-100 h-100 colored-bg" id="homepage layer_video">
             <Logo url="/images/logo.png" />
-            <Navigation handleClick={handleClick}/>
+            <Navigation navScrolling={navScrolling}/>
             <Headlines textColor="#fff"  />
         </section>
         </>

@@ -1,16 +1,19 @@
 
 
-export const Navigation = ({url, handleClick}) => {
+export const Navigation = ({url,  navScrolling={navScrolling}}) => {
+
+   
+
 
     return ( 
         <ul className="nav_main" >
     
             <li>
-                <a href="#unternehmen" onClick={e => handleClick(e,'#unternehmen')}>Für Unternehmen</a>
+                <a href="#unternehmen" onClick={e => navScrolling(e,'company')}>Für Unternehmen</a>
             </li>
             
             <li>
-                <a href="#nonprofit" onClick={e => handleClick(e,'#ngo')}>Für NGOs und Non-Profits</a>
+                <a href="#nonprofit" onClick={e => navScrolling(e,'ngo')}>Für NGOs und Non-Profits</a>
             </li>
             <li>
                 <a href="#coaching">Coaching</a>

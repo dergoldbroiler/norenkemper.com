@@ -7,6 +7,7 @@ export const Videobackground = ({url, poster}) => {
             autoPlay 
             loop 
             muted  
+            playsinline
             data-object-fit="cover"
             src="/sven.webm"
            />
